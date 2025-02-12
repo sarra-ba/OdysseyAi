@@ -20,6 +20,9 @@ NEWSPIDER_MODULE = "web3scraper.spiders"
 ROBOTSTXT_OBEY = False
 FEED_FORMAT = 'csv'
 FEED_URI = 'output_data.csv'
+ITEM_PIPELINES = {
+    'web3scraper.pipelines.ESGProcessingPipeline': 300,
+}
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
